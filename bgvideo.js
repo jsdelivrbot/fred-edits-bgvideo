@@ -7,13 +7,16 @@ document.body.innerHTML += `
 
 var node = document.createElement('style')
 node.innerHTML += `
+body {
+    position: absolute;
+}
 #full_screen_image {
-    backgroundImage = 'url(https://cdn.rawgit.com/rwest202/fred-edits-bgvideo/master/Into_the_Wild.jpg)'
+    background-image = url(https://cdn.rawgit.com/rwest202/fred-edits-bgvideo/master/Into_the_Wild.jpg)
 }
 
-#full_screen_image video {
+video {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -23,4 +26,5 @@ node.innerHTML += `
     margin: 0;
 }
 `
+
 document.body.appendChild(node)
