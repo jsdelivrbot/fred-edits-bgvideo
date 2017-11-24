@@ -1,7 +1,4 @@
-var bgImage = document.querySelector('#full_screen_image')
-bgImage.style.backgroundImage = 'url(https://cdn.rawgit.com/rwest202/fred-edits-bgvideo/master/Into_the_Wild.jpg)'
-
-bgImage.innerHTML += `
+document.body.innerHTML += `
 <video autoplay loop>
     <source src="https://cdn.rawgit.com/rwest202/fred-edits-bgvideo/blob/master/Into_the_Wild.webm">
     <source src="https://cdn.rawgit.com/rwest202/fred-edits-bgvideo/blob/master/Into_the_Wild.mp4">
@@ -10,7 +7,11 @@ bgImage.innerHTML += `
 
 var node = document.createElement('style')
 node.innerHTML += `
-video {
+#full_screen_image {
+    backgroundImage = 'url(https://cdn.rawgit.com/rwest202/fred-edits-bgvideo/master/Into_the_Wild.jpg)'
+}
+
+#full_screen_image video {
     width: 100%;
     height: 100vh;
     position: absolute;
